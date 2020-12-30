@@ -1,11 +1,11 @@
 import React from "react";
 
-function Menu() {
+function Menu({ open, setOpen }) {
   return (
-    <div className="menu-toggle">
-      <div className="bar bar-start"></div>
-      <div className="bar bar-mid"></div>
-      <div className="bar bar-end"></div>
+    <div className={open ? "menu-toggle open" : "menu-toggle"} open={open} onClick={() => setOpen(!open)}>
+      <div className={open ? "bar bar-start open" : "bar bar-start"} open={open}></div>
+      <div className={open ? "bar bar-mid open" : "bar bar-mid"} open={open}></div>
+      <div className={open ? "bar bar-end open" : "bar bar-end"} open={open}></div>
     </div>
   );
 }

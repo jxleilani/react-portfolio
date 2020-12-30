@@ -9,7 +9,7 @@ body{
   color: #fff;
   overflow-x: hidden;
 }
-body.open{
+.wrapper.open{
   overflow-y: hidden;
 }
 section{
@@ -79,7 +79,9 @@ section.about{
 .nav ul li:hover a::before{
   opacity: 1;
 }
-
+.nav-link a{
+  cursor: pointer;
+}
 .menu-toggle{
   position: absolute;
   display: flex;

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import './App.css'
 import Wrapper from './components/Wrapper'
 import Menu from './components/Menu'
+import Navbar from './components/Navbar/Navbar.js'
 import Hero from './components/Hero'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
@@ -11,21 +13,14 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Wrapper>
-      <Menu />
-
-        <nav className="nav">
-          <ul>
-            <li className="nav-link">Home</li>
-            <li className="nav-link">About</li>
-            <li className="nav-link">Portfolio</li>
-            <li className="nav-link">Experience</li>
-            <li className="nav-link">Education</li>
-            <li className="nav-link">Contact</li>
-          </ul>
-        </nav>
-
+    <Wrapper open={open} setOpen={setOpen} >
+      <Router>
+        <Menu open={open} setOpen={setOpen} />
+        <Navbar open={open} setOpen={setOpen} />
+        <Route />
         <Hero />
         <About />
         <Portfolio />
@@ -33,6 +28,7 @@ function App() {
         <Education />
         <Contact />
         <Footer />
+      </Router>
     </Wrapper>
   );
 }
