@@ -1,9 +1,17 @@
 import React from 'react'
+import Burger from '../assets/Burger.png'
+import DaMoJo from '../assets/DaMoJo.png'
+import DayPlanner from '../assets/DayPlanner.png'
+import hwhelper from '../assets/hwhelper.png'
+import NoteTaker from '../assets/NoteTaker.png'
+import PassGen from '../assets/PassGen.png'
+import QuizApp from '../assets/QuizApp.png'
+import Weather from '../assets/Weather.png'
 
 const projectsArr = [
   { 
     title: "Da.Mo.Jo - Virtual Closet",
-    image: "../../public/assets/DaMoJo.png",
+    image: DaMoJo,
     alt: "Damojo logo",
     url: "https://project2-damojo.herokuapp.com/",
     github: "https://github.com/jxleilani/project2",
@@ -13,7 +21,7 @@ const projectsArr = [
   },
   { 
     title: "Weather App",
-    image: "./Assets/img/Weather.png",
+    image: Weather,
     alt: "Weather app screenshot of forecast",
     url: "https://jxleilani.github.io/Weather/",
     github: "https://github.com/jxleilani/Weather",
@@ -24,7 +32,7 @@ const projectsArr = [
   },
   { 
     title: "Homework Helper",
-    image: "./Assets/img/hwhelper.png",
+    image: hwhelper,
     alt: "Homework helper screenshot of weekly calendar",
     url: "https://vscacchitti.github.io/HomeworkHelper/",
     github: "https://github.com/VScacchitti/HomeworkHelper",
@@ -34,7 +42,7 @@ const projectsArr = [
   },
   {
     title: "Build-A-Burger",
-    image: "./Assets/img/Burger.png",
+    image: Burger,
     alt: "Screenshot of build-a-burger app and burger choices",
     url: "https://quiet-beyond-71421.herokuapp.com/",
     github: "https://github.com/jxleilani/burger",
@@ -44,7 +52,7 @@ const projectsArr = [
   },
   {
     title: "Note Taker",
-    image: "./Assets/img/NoteTaker.png",
+    image: NoteTaker,
     alt: "Screenshot of note taking app",
     url: "https://blooming-spire-75700.herokuapp.com/",
     github: "https://github.com/jxleilani/Note-Taker",
@@ -54,7 +62,7 @@ const projectsArr = [
   },
   {
     title: "JavaScript Quiz",
-    image: "./Assets/img/QuizApp.png",
+    image: QuizApp,
     alt: "JavaScript Quiz screenshot",
     url: "https://jxleilani.github.io/QuizApp/", 
     github: "https://github.com/jxleilani/QuizApp",
@@ -64,7 +72,7 @@ const projectsArr = [
   },
   {
     title: "Day Planner",
-    image: "./Assets/img/DayPlanner.png",
+    image: DayPlanner,
     alt: "Daily planner screenshot",
     url: "https://jxleilani.github.io/DayPlanner/", 
     github: "https://github.com/jxleilani/DayPlanner",
@@ -74,7 +82,7 @@ const projectsArr = [
   },
   {
     title: "Password Generator",
-    image: "./Assets/img/PassGen.png",
+    image: PassGen,
     alt: "Password generator screenshot",
     url: "https://jxleilani.github.io/PasswordGenerator/",
     github: "https://github.com/jxleilani/PasswordGenerator",
@@ -88,9 +96,10 @@ function Project() {
   return (
     <div>
     {projectsArr.map((project) => (
-      <div className="portfolio-item">
+      <div key={project.title} className="portfolio-item">
+        <img src={project.image} alt={project.alt} />
       <div className="portfolio-img item" data-aos="fade-up-left">
-        <a href={project.url} target="_blank" rel="noreferrer"><img src={project.image} alt={project.alt} /></a>
+        <a href={project.url} target="_blank" rel="noreferrer"><img src="../../public/assets/DaMoJo.png" alt={project.alt} /></a>
       </div>
       <div className="portfolio-desc item-2">
         <h6>{project.title}</h6>
