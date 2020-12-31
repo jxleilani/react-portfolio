@@ -204,7 +204,7 @@ section.about{
   justify-content: center;
   margin-bottom: 30px;
 }
-.portfolio-img img{
+.portfolio-item img{
   height: 200px;
   border-radius: 8px;
 }
