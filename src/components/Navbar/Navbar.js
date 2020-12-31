@@ -2,14 +2,6 @@ import React from 'react'
 import { Link } from 'react-scroll'
 
 function Navbar({ open, setOpen }) {
-  const navLinks = {
-    about: '#about',
-    portfolio: '#portfolio',
-    experience: '#experience',
-    education: '#education',
-    contact: '#contact',
-  }
-
   return (
     <nav className={open ? "nav open" : "nav"} open={open} onClick={() => setOpen(!open)}>
       <ul>

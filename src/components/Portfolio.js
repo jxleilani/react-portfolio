@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react'
+import Project from './Project'
 
 function Portfolio() {
   return (
@@ -8,6 +9,7 @@ function Portfolio() {
           <h1>Portfolio</h1>
           <h6>& Recent Projects</h6>
         </div>
+        <Project />
       </div>
     </section>
   );
