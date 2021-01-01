@@ -1,27 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LinkScroll from '../LinkScroll'
 
 function Navbar({ open, setOpen }) {
   return (
     <nav className={open ? "nav open" : "nav"} open={open} onClick={() => setOpen(!open)}>
       <ul>
         <li className="nav-link">
-          <Link to="/" data-text="Home">Home</Link>
+          <Link to="/" data-text="Home" onClick={() => setOpen(!open)}>Home</Link>
         </li>
         <li className="nav-link">
-          <Link to="about" data-text="About">About</Link>
+          <LinkScroll open={open} setOpen={setOpen} to={"about"} dataText={"About"} />
         </li>
         <li className="nav-link">
-          <Link to="/portfolio" data-text="Portfolio">Portfolio</Link>
+          <Link to="/portfolio" data-text="Portfolio" onClick={() => setOpen(!open)}>Portfolio</Link>
         </li>
         <li className="nav-link">
-          <Link to="experience" data-text="Experience">Experience</Link>
+          <LinkScroll to={"experience"} dataText={"Experience"} onClick={() => setOpen(!open)} />
         </li>
         <li className="nav-link">
-          <Link to="education" data-text="Education">Education</Link>
+          <LinkScroll to={"education"} dataText={"Education"} onClick={() => setOpen(!open)} />
         </li>
         <li className="nav-link">
-          <Link to="contact" data-text="Contact">Contact</Link>
+          <LinkScroll to={"contact"} dataText={"Contact"} onClick={() => setOpen(!open)} />
         </li>
       </ul>
     </nav>

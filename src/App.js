@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Menu open={open} setOpen={setOpen} />
         <Navbar open={open} setOpen={setOpen} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route path="/portfolio" component={Portfolio} />
         <Route exact path="/" component={Main} />
   
         <Contact />
