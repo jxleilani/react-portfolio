@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 
 function Navbar({ open, setOpen }) {
   return (
@@ -12,7 +12,7 @@ function Navbar({ open, setOpen }) {
           <Link to="about" data-text="About">About</Link>
         </li>
         <li className="nav-link">
-          <Link to="portfolio" data-text="Portfolio">Portfolio</Link>
+          <Link to="/portfolio" data-text="Portfolio">Portfolio</Link>
         </li>
         <li className="nav-link">
           <Link to="experience" data-text="Experience">Experience</Link>
