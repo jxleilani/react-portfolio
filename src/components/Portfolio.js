@@ -1,13 +1,11 @@
 import React from 'react'
 import Project from './Project'
-import Wrapper from './Wrapper'
-import Hero from './Hero'
+
 
 function Portfolio() {
   return (
-    <Wrapper>
-    <Hero />
-    <section className="portfolio" id="portfolio">
+    <div>
+    <section className="portfolio" id="portfolio" style={{margin: "-30rem 0 4rem"}}>
       <div className="container portfoliocontainer">
         <div className="section-heading">
           <h1>Portfolio</h1>
@@ -16,7 +14,7 @@ function Portfolio() {
         <Project />
       </div>
     </section>
-    </Wrapper>
+    </div>
   );
 }
 
