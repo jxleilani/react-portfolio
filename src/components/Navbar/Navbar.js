@@ -7,7 +7,7 @@ function Navbar({ open, setOpen }) {
     <nav className={open ? "nav open" : "nav"} open={open} onClick={() => setOpen(!open)}>
       <ul>
         <li className="nav-link">
-          <Link to="/" data-text="Home" open={open} setOpen={setOpen}>Home</Link>
+          <Link to="/react-portfolio" data-text="Home" open={open} setOpen={setOpen}>Home</Link>
         </li>
         <li className="nav-link">
           <LinkScroll open={open} setOpen={setOpen} to={"about"} dataText={"About"} />

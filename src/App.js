@@ -20,7 +20,7 @@ function App() {
         <Menu open={open} setOpen={setOpen} />
         <Navbar open={open} setOpen={setOpen} />
         <Route path="/portfolio" component={Portfolio} />
-        <Route exact path="/" component={Main} />
+        <Route exact path="/react-portfolio" component={Main} />
   
         <Contact />
         <Footer />
