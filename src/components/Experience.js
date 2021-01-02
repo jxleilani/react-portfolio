@@ -19,15 +19,7 @@ function Experience() {
             technical aptitude and communication skills make me an excellent
             addition to any development team.
           </p>
-          <div className="resume-btn">
-            <a
-              href="./Assets/JoyMeredith.Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button>View My Resume</button>
-            </a>
-          </div>
+          
         </div>
       </div>
     </section>
