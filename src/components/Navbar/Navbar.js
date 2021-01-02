@@ -7,22 +7,22 @@ function Navbar({ open, setOpen }) {
     <nav className={open ? "nav open" : "nav"} open={open} onClick={() => setOpen(!open)}>
       <ul>
         <li className="nav-link">
-          <Link to="/" data-text="Home" onClick={() => setOpen(!open)}>Home</Link>
+          <Link to="/" data-text="Home" open={open} setOpen={setOpen}>Home</Link>
         </li>
         <li className="nav-link">
           <LinkScroll open={open} setOpen={setOpen} to={"about"} dataText={"About"} />
         </li>
         <li className="nav-link">
-          <Link to="/portfolio" data-text="Portfolio" onClick={() => setOpen(!open)}>Portfolio</Link>
+          <Link to="/portfolio" data-text="Portfolio" open={open} setOpen={setOpen}>Portfolio</Link>
         </li>
         <li className="nav-link">
-          <LinkScroll to={"experience"} dataText={"Experience"} onClick={() => setOpen(!open)} />
+          <LinkScroll to={"experience"} dataText={"Experience"} open={open} setOpen={setOpen} />
         </li>
         <li className="nav-link">
-          <LinkScroll to={"education"} dataText={"Education"} onClick={() => setOpen(!open)} />
+          <LinkScroll to={"education"} dataText={"Education"} open={open} setOpen={setOpen} />
         </li>
         <li className="nav-link">
-          <LinkScroll to={"contact"} dataText={"Contact"} onClick={() => setOpen(!open)} />
+          <LinkScroll to={"contact"} dataText={"Contact"} open={open} setOpen={setOpen} />
         </li>
       </ul>
     </nav>
